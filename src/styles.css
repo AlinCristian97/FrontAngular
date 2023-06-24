@@ -6,3 +6,13 @@ p {
     margin-bottom: 0px;
     padding: 0px;
 }
+
+.primary-separator {
+    border-top: 2px solid #343a40;
+    margin: 25px 0;
+}
+
+.secondary-separator {
+    border-top: 1px dashed #999;
+    margin: 20px 0;
+}
