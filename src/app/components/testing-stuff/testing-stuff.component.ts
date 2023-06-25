@@ -12,5 +12,4 @@ export class TestingStuffComponent extends ComponentBase {
     super();
   }
 
-
 }
