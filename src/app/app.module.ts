@@ -6,13 +6,15 @@ import { QuickPrototypingComponent } from './components/quick-prototyping/quick-
 import { HttpClientModule } from '@angular/common/http';
 import { LearnTooltipsComponent } from './components/learn/learn-tooltips/learn-tooltips.component';
 import { ComponentsContainerComponent } from './components/components-container/components-container.component';
+import { LearnPipesComponent } from './components/learn/learn-pipes/learn-pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuickPrototypingComponent,
     LearnTooltipsComponent,
-    ComponentsContainerComponent
+    ComponentsContainerComponent,
+    LearnPipesComponent
   ],
   imports: [
     BrowserModule,
