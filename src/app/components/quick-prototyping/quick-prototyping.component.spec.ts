@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestingStuffComponent } from './testing-stuff.component';
+import { QuickPrototypingComponent } from './quick-prototyping.component';
 
 describe('TestingStuffComponent', () => {
-  let component: TestingStuffComponent;
-  let fixture: ComponentFixture<TestingStuffComponent>;
+  let component: QuickPrototypingComponent;
+  let fixture: ComponentFixture<QuickPrototypingComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestingStuffComponent]
+      declarations: [QuickPrototypingComponent]
     });
-    fixture = TestBed.createComponent(TestingStuffComponent);
+    fixture = TestBed.createComponent(QuickPrototypingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
