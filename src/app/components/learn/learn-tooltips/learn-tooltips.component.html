@@ -17,24 +17,35 @@
   <div class="container">
     <div class="row">
       <div class="d-flex justify-content-center align-items-center">
-        <button type="button" class="btn btn-secondary mx-2 col-2" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+        <button #buttonTooltipTop type="button" class="btn btn-secondary mx-2 col-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
           Tooltip on top
         </button>
-        <button type="button" class="btn btn-secondary mx-2 col-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+        <button #buttonTooltipBottom type="button" class="btn btn-secondary mx-2 col-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
           Tooltip on bottom
         </button>
         </div>
     </div>
-    <div class="p-3"></div>
+    
+    <br>
+    <br>
+
     <div class="row">
       <div class="d-flex flex-column justify-content-center">
-        <button type="button" class="btn btn-secondary my-2 align-self-center text-center col-2" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+        <button #buttonTooltipRight type="button" class="btn btn-secondary my-2 align-self-center text-center col-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
           Tooltip on right
         </button>
-        <button type="button" class="btn btn-secondary my-2 align-self-center text-center col-2" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+        <button #buttonTooltipLeft type="button" class="btn btn-secondary my-2 align-self-center text-center col-2" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
           Tooltip on left
         </button>
       </div>
     </div>
+  </div>
+</div>
+
+<br>
+
+<div class="p-5 border rounded">
+  <div class="d-flex flex-column justify-content-center">
+    <button class="btn btn-success text-center my-2 col-3 align-self-center" (click)="addDivBelowClicked($event)">Add <strong>button</strong> below</button>
   </div>
 </div>
