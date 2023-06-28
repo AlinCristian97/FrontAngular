@@ -4,7 +4,7 @@ import { ComponentBase } from 'src/app/shared/classes/component-base';
 @Component({
   selector: 'app-quick-prototyping',
   templateUrl: './quick-prototyping.component.html',
-  styleUrls: ['./quick-prototyping.component.css']
+  styleUrls: ['./quick-prototyping.component.scss']
 })
 export class QuickPrototypingComponent extends ComponentBase {
 

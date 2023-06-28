@@ -5,7 +5,7 @@ import { Tooltip } from 'bootstrap';
 @Component({
   selector: 'app-learn-tooltips',
   templateUrl: './learn-tooltips.component.html',
-  styleUrls: ['./learn-tooltips.component.css']
+  styleUrls: ['./learn-tooltips.component.scss']
 })
 export class LearnTooltipsComponent extends ComponentBase {
 
