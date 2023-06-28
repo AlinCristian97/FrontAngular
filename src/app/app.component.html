@@ -1,29 +1,25 @@
-<div class="bg-dark">
+<div class="main-background">
+  <div class="title-area">
+    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+      <div>
+        <p class="environment badge m-0 p-2 px-3 rounded" [ngClass]="{'environment-development': currentEnvironment === 'development', 'environment-production': currentEnvironment === 'production'}">{{currentEnvironment}}</p>
+      </div>
+      <div>
+        <p class="badge m-0 p-2 px-3 rounded" [ngClass]="isConnectedToBackend ? 'backend-connected' : 'backend-not-connected'">{{connectedToBackendMessage}}</p>
+      </div>
+    </div>
+    <div class="pb-2">
+      <p class="title fs-2 text-center"><strong>{{title}}</strong></p>
+    </div>
+  </div>
+
+  <div class="p-5">
+    <p class="description text-center fs-4">
+      This project has been created for the purposes of learning and quick-prototyping.
+    </p>
+  </div>
+
   <div>
-
-    <div class="bg-dark" style="position: sticky; top: 0px; z-index: 999;">
-      <div class="d-flex justify-content-between align-items-center px-3 pt-3">
-        <div>
-          <p class="badge m-0 p-2 px-3 rounded text-uppercase text-dark" style="background-color: #F6FA70;">{{currentEnvironment}}</p>
-        </div>
-        <div>
-          <p class="badge m-0 p-2 px-3 rounded text-uppercase text-dark" [ngStyle]="{'background-color': isConnectedToBackend ? '#00DFA2' : '#FF0060'}">{{connectedToBackendMessage}}</p>
-        </div>
-      </div>
-      <div class="pb-2">
-        <p class="fs-2 text-light text-center"><strong>{{title}}</strong></p>
-      </div>
-    </div>
-  
-    <div class="p-5">
-      <p class="text-light text-center fs-4">
-        This project has been created for the purposes of learning and quick-prototyping.
-      </p>
-    </div>
-
-    <div>
-      <app-components-container></app-components-container>
-    </div>
-
+    <app-components-container></app-components-container>
   </div>
 </div>
