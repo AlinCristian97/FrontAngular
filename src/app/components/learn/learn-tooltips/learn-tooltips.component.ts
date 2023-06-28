@@ -14,6 +14,11 @@ export class LearnTooltipsComponent extends ComponentBase {
   @ViewChild('buttonTooltipRight') buttonTooltipRight!: ElementRef;
   @ViewChild('buttonTooltipLeft') buttonTooltipLeft!: ElementRef;
 
+  @ViewChild('buttonTooltipBottom2') buttonTooltipBottom2!: ElementRef;
+  @ViewChild('buttonTooltipBottom3') buttonTooltipBottom3!: ElementRef;
+  @ViewChild('buttonTooltipBottom4') buttonTooltipBottom4!: ElementRef;
+  @ViewChild('buttonTooltipBottom5') buttonTooltipBottom5!: ElementRef;
+
   ngAfterViewInit(): void {
     this.initializeTooltips();
   }
@@ -23,6 +28,11 @@ export class LearnTooltipsComponent extends ComponentBase {
     new Tooltip(this.buttonTooltipBottom.nativeElement);
     new Tooltip(this.buttonTooltipRight.nativeElement);
     new Tooltip(this.buttonTooltipLeft.nativeElement);
+
+    new Tooltip(this.buttonTooltipBottom2.nativeElement);
+    new Tooltip(this.buttonTooltipBottom3.nativeElement);
+    new Tooltip(this.buttonTooltipBottom4.nativeElement);
+    new Tooltip(this.buttonTooltipBottom5.nativeElement);
   }
 
   addDivBelowClicked(e: any): void {
