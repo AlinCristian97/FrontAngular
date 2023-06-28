@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ComponentBase } from 'src/app/shared/classes/component-base';
 import { Tooltip } from 'bootstrap';
 
@@ -18,6 +18,10 @@ export class LearnTooltipsComponent extends ComponentBase {
   @ViewChild('buttonTooltipBottom3') buttonTooltipBottom3!: ElementRef;
   @ViewChild('buttonTooltipBottom4') buttonTooltipBottom4!: ElementRef;
   @ViewChild('buttonTooltipBottom5') buttonTooltipBottom5!: ElementRef;
+
+  constructor(private renderer: Renderer2) {
+    super();
+  }
 
   ngAfterViewInit(): void {
     this.initializeTooltips();
@@ -39,19 +43,19 @@ export class LearnTooltipsComponent extends ComponentBase {
     const element = e.target;
     const parentElement = element.parentElement;
 
-    const newButton = document.createElement('button');
+    const newButton = this.renderer.createElement('button');
     newButton.textContent = 'Hover me!';
-    newButton.classList.add('btn');
-    newButton.classList.add('btn-primary');
-    newButton.classList.add('my-3');
-    newButton.classList.add('align-self-center');
-    newButton.classList.add('col-3');
-    newButton.setAttribute('data-bs-toggle', 'tooltip');
-    newButton.setAttribute('data-bs-placement', 'bottom');
-    newButton.setAttribute('title', 'Tooltip is working!');
+    this.renderer.addClass(newButton, 'btn');
+    this.renderer.addClass(newButton, 'tooltip-source');
+    this.renderer.addClass(newButton, 'my-3');
+    this.renderer.addClass(newButton, 'align-self-center');
+    this.renderer.addClass(newButton, 'col-3');
+    this.renderer.setAttribute(newButton, 'data-bs-toggle', 'tooltip');
+    this.renderer.setAttribute(newButton, 'data-bs-placement', 'bottom');
+    this.renderer.setAttribute(newButton, 'title', 'Tooltip is working!');
 
     new Tooltip(newButton);
 
-    parentElement.appendChild(newButton);
+    this.renderer.appendChild(parentElement, newButton);
   }
 }

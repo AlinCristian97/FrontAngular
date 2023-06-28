@@ -5,10 +5,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 p {
-    margin-bottom: 0px;
-    padding: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 
 .badge {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.sample {
+  border: 1px dashed $color-background-dark;
 }
