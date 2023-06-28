@@ -19,12 +19,10 @@ export class AppComponent {
 
     pingService.ping().subscribe({
       next: () => {
-        console.log('api call success');
         this.isConnectedToBackend = true;
         this.connectedToBackendMessage = "Backend connected";
       },
       error: () => {
-        console.log('api call fail');
         this.isConnectedToBackend = false;
         this.connectedToBackendMessage = "Backend not connected";
       },
