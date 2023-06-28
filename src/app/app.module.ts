@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LearnTooltipsComponent } from './components/learn/learn-tooltips/learn-tooltips.component';
 import { ComponentsContainerComponent } from './components/components-container/components-container.component';
 import { LearnPipesComponent } from './components/learn/learn-pipes/learn-pipes.component';
+import { DarkBackgroundDirective } from './directives/dark-background.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LearnPipesComponent } from './components/learn/learn-pipes/learn-pipes.
     QuickPrototypingComponent,
     LearnTooltipsComponent,
     ComponentsContainerComponent,
-    LearnPipesComponent
+    LearnPipesComponent,
+    DarkBackgroundDirective
   ],
   imports: [
     BrowserModule,
