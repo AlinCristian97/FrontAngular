@@ -1,8 +1,8 @@
-<div class="p-5 bg-dark">
+<div class="bg-dark">
   <div>
 
-    <div>
-      <div class="d-flex justify-content-between align-items-center">
+    <div class="bg-dark" style="position: sticky; top: 0px; z-index: 999;">
+      <div class="d-flex justify-content-between align-items-center px-3 pt-3">
         <div>
           <p class="badge m-0 p-2 px-3 rounded text-uppercase text-dark" style="background-color: #F6FA70;">{{currentEnvironment}}</p>
         </div>
@@ -10,10 +10,9 @@
           <p class="badge m-0 p-2 px-3 rounded text-uppercase text-dark" [ngStyle]="{'background-color': isConnectedToBackend ? '#00DFA2' : '#FF0060'}">{{connectedToBackendMessage}}</p>
         </div>
       </div>
-    </div>
-    <div class="primary-separator"></div>
-    <div>
-      <p class="py-2 px-3 rounded fs-2 text-light text-center"><strong>{{title}}</strong></p>
+      <div class="pb-2">
+        <p class="fs-2 text-light text-center"><strong>{{title}}</strong></p>
+      </div>
     </div>
   
     <div class="p-5">

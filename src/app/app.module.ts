@@ -8,6 +8,7 @@ import { LearnTooltipsComponent } from './components/learn/learn-tooltips/learn-
 import { ComponentsContainerComponent } from './components/components-container/components-container.component';
 import { LearnPipesComponent } from './components/learn/learn-pipes/learn-pipes.component';
 import { DarkBackgroundDirective } from './directives/dark-background.directive';
+import { LearnDirectivesComponent } from './components/learn/learn-directives/learn-directives.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DarkBackgroundDirective } from './directives/dark-background.directive'
     LearnTooltipsComponent,
     ComponentsContainerComponent,
     LearnPipesComponent,
-    DarkBackgroundDirective
+    DarkBackgroundDirective,
+    LearnDirectivesComponent
   ],
   imports: [
     BrowserModule,
