@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { PingService } from './services/ping.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'FrontAngular';
   currentEnvironment: string;
 
@@ -16,8 +17,15 @@ export class AppComponent {
 
   constructor(private pingService: PingService) {
     this.currentEnvironment = environment.environmentName;
+  }
 
-    pingService.ping().subscribe({
+  ngOnInit(): void {
+    this.ping();
+    this.startPingInterval(30);
+  }
+
+  ping() {
+    this.pingService.ping().subscribe({
       next: () => {
         this.isConnectedToBackend = true;
         this.connectedToBackendMessage = "Backend connected";
@@ -28,5 +36,25 @@ export class AppComponent {
       },
       complete: () => { }
    });
+  }
+
+  startPingInterval(periodInSeconds: number) {
+    const periodInMiliseconds = periodInSeconds * 1000;
+
+    const source = interval(periodInMiliseconds); 
+
+    source.subscribe(() => {
+      this.pingService.ping().subscribe({
+        next: () => {
+          this.isConnectedToBackend = true;
+          this.connectedToBackendMessage = "Backend connected";
+        },
+        error: () => {
+          this.isConnectedToBackend = false;
+          this.connectedToBackendMessage = "Backend not connected";
+        },
+        complete: () => { }
+     });
+    });
   }
 }
