@@ -8,6 +8,7 @@ import { Tooltip } from 'bootstrap';
   styleUrls: ['./learn-tooltips.component.scss']
 })
 export class LearnTooltipsComponent extends ComponentBase {
+  show: boolean = false;
 
   @ViewChild('buttonTooltipTop') buttonTooltipTop!: ElementRef;
   @ViewChild('buttonTooltipBottom') buttonTooltipBottom!: ElementRef;
@@ -57,5 +58,9 @@ export class LearnTooltipsComponent extends ComponentBase {
     new Tooltip(newButton);
 
     this.renderer.appendChild(parentElement, newButton);
+  }
+  
+  toggleShow() {
+    this.show = !this.show;
   }
 }

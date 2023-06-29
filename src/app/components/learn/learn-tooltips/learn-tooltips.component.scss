@@ -1,5 +1,13 @@
 @import '../../../../styles/colors';
 
+.content-toggle {
+  background-color: $color-background-dark;
+  color: $color-text-light;
+  font-size: small;
+  border: none;
+  padding: 0.25rem 1rem;
+}
+
 .badge {
   background-color: $color-normal-magenta;
 }
