@@ -16,3 +16,12 @@ p {
 .sample {
   border: 1px dashed $color-background-dark;
 }
+
+.sample-title {
+  color: $color-muted;
+  text-align: center;
+  border-bottom: 1px solid $color-muted;
+  padding-bottom: 0.5%;
+  margin-bottom: 4%;
+  width: 50%;
+}
