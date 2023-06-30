@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, DestroyRef, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ComponentBase } from 'src/app/shared/classes/component-base';
 import { Tooltip } from 'bootstrap';
 
@@ -60,6 +60,7 @@ export class LearnTooltipsComponent extends ComponentBase {
     this.renderer.appendChild(parentElement, newButton);
   }
   
+  //TODO: instead of doing this for each and every component, better find something reusable
   toggleShow() {
     this.show = !this.show;
   }

@@ -3,7 +3,7 @@
   <button (click)="toggleShow()" class="content-toggle rounded">{{(show ? 'hide' : 'show') | uppercase}}</button>
 </div>
 
-<div *ngIf="show">
+<div [ngStyle]="{'display': show ? 'block' : 'none'}">
   <br>
   <div class="sample p-5 rounded">
     <div class="container">

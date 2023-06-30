@@ -3,6 +3,7 @@
 
 .component-wrapper {
   background-color: $color-background-light;
+  width: 100%;
 }
 
 .components-container {
@@ -11,4 +12,19 @@
 
 .components-separator {
   margin: 5% 0;
+}
+
+@keyframes widthAnimation {
+  from {
+    opacity: 0;
+    width: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.components-animation {
+  animation: widthAnimation 1s ease;
 }
