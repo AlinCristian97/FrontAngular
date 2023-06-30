@@ -1,15 +1,20 @@
-<div class="badge p-2">{{name}}</div>
-
-<div class="sample p-5 rounded">
-  <div class="container">
-    <div class="d-flex justify-content-center align-items-center">
-      <p class="sample-title">Basic directive</p>
-    </div>
-    <div class="row">
-      <div class="d-flex justify-content-center align-items-center">
-        <p class="py-2 px-3 rounded" appDarkBackground>This is a HTML element affected by appDarkBackground directive</p>
-      </div>
-    </div>
-  </div>
+<div class="d-flex justify-content-between align-items-center">
+  <div class="badge badge-learn p-2">{{name}}</div>
+  <button (click)="toggleShow()" class="content-toggle rounded">{{(show ? 'hide' : 'show') | uppercase}}</button>
 </div>
 
+<div [ngStyle]="{'display': show ? 'block' : 'none'}">
+  <br>
+  <div class="sample p-5 rounded">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="sample-title">Basic directive</p>
+      </div>
+      <div class="row">
+        <div class="d-flex justify-content-center align-items-center">
+          <p class="py-2 px-3 rounded" appDarkBackground>This is a HTML element affected by appDarkBackground directive</p>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>

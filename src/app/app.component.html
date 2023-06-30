@@ -1,16 +1,17 @@
 <div class="main-background">
   <div class="title-area">
-    <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+    <div class="d-flex justify-content-between align-items-center p-4">
       <div>
         <p class="environment badge m-0 p-2 px-3 rounded" style="width: 200px;" [ngClass]="{'environment-development': currentEnvironment === 'development', 'environment-production': currentEnvironment === 'production'}">{{currentEnvironment}}</p>
+      </div>
+      <div>
+        <p class="title fs-2 text-center"><strong>{{title}}</strong></p>
       </div>
       <div>
         <p class="badge m-0 p-2 px-3 rounded" style="width: 200px;" [ngClass]="isConnectedToBackend ? 'backend-connected' : 'backend-not-connected'">{{connectedToBackendMessage}}</p>
       </div>
     </div>
-    <div class="pb-2">
-      <p class="title fs-2 text-center"><strong>{{title}}</strong></p>
-    </div>
+
   </div>
 
   <div class="p-5">

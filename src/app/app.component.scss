@@ -1,7 +1,7 @@
 @import '../styles/colors';
 
 .main-background {
-  background-color: $color-background-dark;
+  background: linear-gradient(to bottom, $color-background-dark-variant, $color-background-dark);
 }
 
 .title {

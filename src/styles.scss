@@ -21,3 +21,19 @@ p {
   margin-bottom: 4%;
   width: 50%;
 }
+
+.content-toggle {
+  background-color: $color-background-dark;
+  color: $color-text-light;
+  font-size: small;
+  border: none;
+  padding: 0.25rem 1rem;
+}
+
+.badge-learn {
+  background-color: $color-normal-magenta;
+}
+
+.badge-prototyping {
+  background-color: $color-normal-blue;
+}

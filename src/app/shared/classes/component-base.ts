@@ -1,5 +1,6 @@
 export abstract class ComponentBase {
-    public name: string = this.getName();
+    protected name: string = this.getName();
+    protected show: boolean = false;
 
     constructor() { }
 
@@ -14,5 +15,9 @@ export abstract class ComponentBase {
       }
 
       return matches.join(' ');
+    }
+
+    protected toggleShow() {
+      this.show = !this.show;
     }
 }
