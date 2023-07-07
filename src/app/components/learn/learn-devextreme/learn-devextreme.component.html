@@ -5,5 +5,8 @@
   
 <div [ngStyle]="{'display': show ? 'block' : 'none'}">
     <br>
-    <p>learn-devextreme works!</p>
+    <div>
+        <dx-data-grid id="dataGrid" #dataGrid [dataSource]="fruits">
+        </dx-data-grid>
+    </div>
 </div>

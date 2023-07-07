@@ -10,6 +10,7 @@ import { LearnPipesComponent } from './components/learn/learn-pipes/learn-pipes.
 import { DarkBackgroundDirective } from './directives/dark-background.directive';
 import { LearnDirectivesComponent } from './components/learn/learn-directives/learn-directives.component';
 import { LearnDevextremeComponent } from './components/learn/learn-devextreme/learn-devextreme.component';
+import { DxDataGridModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LearnDevextremeComponent } from './components/learn/learn-devextreme/le
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    DxDataGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
