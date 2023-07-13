@@ -6,9 +6,11 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PingService {
-  private endpoint: string = 'Ping';
+  private readonly endpoint: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.endpoint = 'Ping';
+  }
 
   ping() {
     const url = `${environment.backendApiUrl}/${this.endpoint}`;
