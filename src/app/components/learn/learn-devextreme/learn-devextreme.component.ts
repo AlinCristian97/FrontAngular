@@ -34,6 +34,13 @@ export class LearnDevextremeComponent extends ComponentBase implements OnInit {
       },
       error: (e) => {
         console.log(e);
+        
+        // const dummyFruitRecord = new Fruit();
+        // dummyFruitRecord.color = "red";
+        // dummyFruitRecord.healthScore = 10;
+        // dummyFruitRecord.name = "strawberry"
+    
+        // this.fruits.push(dummyFruitRecord);
       },
       complete: () => {
         console.log("getFruits completed!");
