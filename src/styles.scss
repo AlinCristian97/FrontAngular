@@ -11,3 +11,25 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+/* Hide the vertical scrollbar */
+// ::-webkit-scrollbar {
+//   width: 0;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: transparent;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: transparent;
+// }
+
+// /* Hide the horizontal scrollbar */
+// ::-webkit-scrollbar-horizontal {
+//   display: none;
+// }
+
+// .scrollable-container {
+//   overflow: hidden;
+// }
