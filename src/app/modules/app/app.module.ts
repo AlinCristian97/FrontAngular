@@ -4,12 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { DxDataGridModule } from 'devextreme-angular';
 
-import { HomeModule } from './modules/home/home.module';
-import { AppRoutingModule } from './modules/app-routing/app-routing.module';
+import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -17,8 +18,7 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
     DxDataGridModule,
 
     // My modules
-    AppRoutingModule,
-    HomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
