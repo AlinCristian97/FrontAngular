@@ -17,22 +17,18 @@
 <!-- TODO: Replace above with Angular Material navbar (make it responsive!) -->
 <div style="background-color: orange; padding: 1%;">
     <div style="display: flex; justify-content: center; align-items: center;">
-        <div style="display: flex; justify-content: end;">
-            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>Item 1</button>
-                <button mat-menu-item>Item 2</button>
-            </mat-menu>
+        <div style="display: flex; justify-content: end; width: 50%;">
+            <button mat-button>About</button>
+            <button mat-button>Menu</button>
         </div>
-        <div style="padding: 0 1%;">
-            FRUIT
+        <div style="padding: 0 3%;">
+            <p style="text-align: center; font-size: large;"><strong>FRUIT</strong></p>
         </div>
-        <div style="display: flex; justify-content: end;">
-            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>Item 1</button>
-                <button mat-menu-item>Item 2</button>
-            </mat-menu>
+        <div style="display: flex; justify-content: start; width: 50%;">
+            <button mat-button>Menu</button>
+            <button mat-button>Categories</button>
+            <button mat-button>History</button>
+
         </div>
     </div>
 
