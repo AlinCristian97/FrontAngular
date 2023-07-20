@@ -7,13 +7,15 @@ import { DxDataGridModule } from 'devextreme-angular';
 
 // My Modules
 import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { HomeModule } from '../home/home.module';
 
 // My Components
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 // Angular Material Modules
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeModule } from '../home/home.module';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { HomeModule } from '../home/home.module';
 
     // Angular Material Modules
     NoopAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
 
     // My Modules
     AppRoutingModule,

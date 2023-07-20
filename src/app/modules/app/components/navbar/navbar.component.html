@@ -1,4 +1,4 @@
-<div style="background-color: gold; padding: 1.5%">
+<!-- <div style="background-color: gold; padding: 1.5%">
     <div style="display: flex; align-items: center; justify-content: space-between;">
         <p>Nav link</p>
         <p>Nav link</p>
@@ -13,5 +13,27 @@
         <p>Nav link</p>
         <p>Nav link</p>
     </div>
-</div>
+</div> -->
 <!-- TODO: Replace above with Angular Material navbar (make it responsive!) -->
+<div style="background-color: orange; padding: 1%;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="display: flex; justify-content: end;">
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+        </div>
+        <div style="padding: 0 1%;">
+            FRUIT
+        </div>
+        <div style="display: flex; justify-content: end;">
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+        </div>
+    </div>
+
+</div>

@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent
@@ -16,7 +15,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     CommonModule,
 
     // Angular Material Modules
-    MatSlideToggleModule
+    MatSlideToggleModule,
   ]
 })
 export class HomeModule { }
