@@ -6,6 +6,7 @@ import { DxDataGridModule } from 'devextreme-angular';
 
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HttpClientModule,
     DxDataGridModule,
 
-    // My modules
+    // Angular Material Modules
+    NoopAnimationsModule,
+
+    // My Modules
     AppRoutingModule
   ],
   providers: [],
