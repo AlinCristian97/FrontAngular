@@ -1,6 +1,10 @@
+import { HomeComponent } from './home.component';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
+
+// Angular Material Modules
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 
@@ -9,7 +13,10 @@ import { HomeComponent } from './home.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
+    // Angular Material Modules
+    MatSlideToggleModule
   ]
 })
 export class HomeModule { }
