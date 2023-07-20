@@ -1,9 +1,0 @@
-<div class="d-flex justify-content-between align-items-center">
-    <div class="badge badge-prototyping p-2">{{name}}</div>
-    <button (click)="toggleShow()" class="content-toggle rounded">{{(show ? 'hide' : 'show') | uppercase}}</button>
-</div>
-  
-<div [ngStyle]="{'display': show ? 'block' : 'none'}">
-    <br>
-    <p>quick-prototyping works!</p>
-</div>
