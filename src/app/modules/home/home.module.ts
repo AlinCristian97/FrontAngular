@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 // Angular Material Modules
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
     // Angular Material Modules
     MatSlideToggleModule,
+    MatButtonModule
   ]
 })
 export class HomeModule { }
