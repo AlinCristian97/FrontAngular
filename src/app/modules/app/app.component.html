@@ -4,18 +4,19 @@
 
 
 <div [ngClass]="{'dark-theme' : isDarkTheme | async}">
-<!-- Nav -->
-<div>
+<div class="mat-typography mat-app-background">
+  <!-- Nav -->
+  <div>
   <app-navbar></app-navbar>
-</div>
+  </div>
 
-<!-- Router -->
-<div>
+  <!-- Router -->
+  <div>
   <router-outlet></router-outlet>
-</div>
+  </div>
 
-<!-- Footer -->
-<div>
+  <!-- Footer -->
+  <div>
   <app-footer></app-footer>
-</div>
+  </div>
 </div>
