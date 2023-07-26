@@ -24,12 +24,6 @@
 
 @include mat.core();
 
-$ttheme: mat.define-light-theme((
-  typography: mat.define-typography-config(),
-  density: 0,
-));
-
-@include mat.all-component-themes($ttheme);
 
 .light-theme {
   $primary: mat.define-palette(mat.$pink-palette, 500);
@@ -48,7 +42,7 @@ $ttheme: mat.define-light-theme((
    density: 0,
   ));
   
-  @include mat.all-component-colors($default-theme);
+  @include mat.all-component-themes($default-theme);
 }
 
 // Our dark theme
@@ -68,4 +62,5 @@ $ttheme: mat.define-light-theme((
     ));
 
     @include mat.all-component-colors($dark-theme);
+    @include mat.all-component-typographies($dark-theme);
 }
