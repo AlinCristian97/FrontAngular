@@ -42,7 +42,8 @@
    density: 0,
   ));
   
-  @include mat.all-component-themes($default-theme);
+  @include mat.all-component-colors($default-theme);
+  @include mat.all-component-typographies($default-theme);
 }
 
 // Our dark theme
