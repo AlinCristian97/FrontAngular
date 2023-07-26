@@ -3,8 +3,8 @@
 <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle>
 
 
-<div [ngClass]="{'dark-theme' : isDarkTheme | async}">
-<div class="mat-typography mat-app-background">
+<div [ngClass]="{'dark-theme': isDarkTheme | async, 'light-theme': !(isDarkTheme | async)}">
+  <div class="mat-typography mat-app-background">
   <!-- Nav -->
   <div>
   <app-navbar></app-navbar>
