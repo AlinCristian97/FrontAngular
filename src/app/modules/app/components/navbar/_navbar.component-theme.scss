@@ -6,6 +6,10 @@
     @if $color-config != null {
       @include color($theme);
     }
+
+    @if $typography-config != null {
+      @include typography($typography-config);
+    }
   }
 
 @mixin color($theme) {
@@ -19,4 +23,15 @@
     .navbar {
         background-color: mat.get-color-from-palette($primary-palette, 700);
     }
-}  
+}
+
+@mixin typography($typography-config) {
+  .alert {
+    .alert-heading {
+      @include mat.typography-level($typography-config, "title");
+    }
+    .alert-footer {
+      @include mat.typography-level($typography-config, "caption");
+    }
+  }
+}
