@@ -24,7 +24,7 @@ $custom-typography: mat.define-typography-config(
   @include mat.all-component-colors($default-theme);
   @include mat.all-component-typographies($default-theme);
 
-  @include components.theme($default-theme, mat.get-typography-config($default-theme));
+  @include components.theme($default-theme, $custom-typography);
 }
 
 // Our dark theme
@@ -46,5 +46,5 @@ $custom-typography: mat.define-typography-config(
     @include mat.all-component-colors($dark-theme);
     @include mat.all-component-typographies($dark-theme);
 
-    @include components.theme($dark-theme, mat.get-typography-config($dark-theme));
+    @include components.theme($dark-theme, $custom-typography);
 }
