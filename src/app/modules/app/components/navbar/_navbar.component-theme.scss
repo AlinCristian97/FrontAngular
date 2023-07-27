@@ -6,32 +6,15 @@
     @if $color-config != null {
       @include color($theme);
     }
-
-    @if $typography-config != null {
-      @include typography($typography-config);
-    }
   }
 
 @mixin color($theme) {
-    // Get the color config from the theme.
     $color-config: mat.get-color-config($theme);
 
-    // Get the primary color palette from the color-config.
     $primary-palette: map.get($color-config, "primary");
     $accent-palette: map.get($color-config, "accent");
 
     .navbar {
         background-color: mat.get-color-from-palette($primary-palette, 700);
     }
-}
-
-@mixin typography($typography-config) {
-  .alert {
-    .alert-heading {
-      @include mat.typography-level($typography-config, "title");
-    }
-    .alert-footer {
-      @include mat.typography-level($typography-config, "caption");
-    }
-  }
-}
+}  
