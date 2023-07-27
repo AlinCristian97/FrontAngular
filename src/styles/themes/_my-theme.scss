@@ -2,6 +2,10 @@
 @use "../components";
 @include mat.core();
 
+$custom-typography: mat.define-typography-config(
+  $font-family: 'Comic Sans'
+);
+
 .light-theme {
   $primary: mat.define-palette(mat.$pink-palette, 500);
   $accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -13,14 +17,14 @@
      accent: $accent,
      warn: $accent
   ),
-   typography: mat.define-typography-config(),
+   typography: $custom-typography,
    density: 0,
   ));
   
   @include mat.all-component-colors($default-theme);
   @include mat.all-component-typographies($default-theme);
 
-  @include components.theme(($default-theme), mat.define-typography-config());
+  @include components.theme($default-theme, mat.get-typography-config($default-theme));
 }
 
 // Our dark theme
@@ -35,12 +39,12 @@
     accent: $dark-accent,
     warn: $dark-accent
     ),
-    typography: mat.define-typography-config(),
+    typography: $custom-typography,
     density: 0,
     ));
 
     @include mat.all-component-colors($dark-theme);
     @include mat.all-component-typographies($dark-theme);
 
-    @include components.theme($dark-theme, mat.define-typography-config());
+    @include components.theme($dark-theme, mat.get-typography-config($dark-theme));
 }
