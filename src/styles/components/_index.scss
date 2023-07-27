@@ -1,0 +1,5 @@
+@use "../../app/modules/app/components/navbar/navbar.component-theme" as navbar;
+
+@mixin theme($theme, $typography-config) {
+  @include navbar.theme($theme, $typography-config);
+}

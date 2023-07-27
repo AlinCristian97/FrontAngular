@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin theme($theme, $typography-config) {
+    $color-config: mat.get-color-config($theme);
+    @if $color-config != null {
+      @include color($theme);
+    }
+  }
+
+@mixin color($theme) {
+    .navbar {
+        background-color: pink;
+    }
+}  
