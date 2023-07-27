@@ -2,9 +2,7 @@
 @use "../components";
 @include mat.core();
 
-$custom-typography: mat.define-typography-config(
-  $font-family: 'Comic Sans'
-);
+$custom-typography: mat.define-typography-config();
 
 .light-theme {
   $primary: mat.define-palette(mat.$pink-palette, 500);
