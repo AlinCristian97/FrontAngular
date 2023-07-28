@@ -13,8 +13,12 @@
 
     $primary-palette: map.get($color-config, "primary");
     $accent-palette: map.get($color-config, "accent");
+    $bg-palette: map.get($color-config, "background");
+
+    $background: map.get($theme, background);
+    $background-color: map-get($background, background);
 
     .navbar {
-        background-color: mat.get-color-from-palette($primary-palette, 700);
+      background-color: $background-color;
     }
 }  
