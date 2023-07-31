@@ -42,7 +42,7 @@ export class ImageSliderComponent implements OnInit {
     const intervalSlidingPeriodInMiliseconds: number = this.intervalSlidingPeriodInSeconds * 1000;
 
     this.intervalExecutorService.stop();
-    this.intervalExecutorService.start(0, intervalSlidingPeriodInMiliseconds, () => this.intervalSlidingCallback());
+    this.intervalExecutorService.start(intervalSlidingPeriodInMiliseconds, intervalSlidingPeriodInMiliseconds, () => this.intervalSlidingCallback());
   }
 
   public getCurrentSlideUrl(): string {
