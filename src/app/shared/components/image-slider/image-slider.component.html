@@ -6,8 +6,14 @@
     <div
       class="slide"
       [ngStyle]="{'background-image': getCurrentSlideUrl() }"
-    ></div>
-    <div class="dotsContainer">
+    >
+        <div *ngIf="!dotsMode" class="buttonsContainer">
+            <div>
+                <button *ngFor="let slide of slides; let slideIndex = index" (click)="goToSlide(slideIndex)" matButton style="margin: 0 1%; padding: 0.5% 2%">Slide {{slide.title}}</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="dotsMode" class="dotsContainer">
       <div
       *ngFor="let slide of slides; let slideIndex = index"
       class="dot"

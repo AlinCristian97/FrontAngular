@@ -9,6 +9,8 @@ import { ImageSlideInterface } from '../../models/interfaces/image-slide.interfa
 export class ImageSliderComponent {
   @Input() slides: ImageSlideInterface[] = [];
 
+  dotsMode: boolean = false;
+
   currentIndex: number = 0;
 
   getCurrentSlideUrl(): string {
