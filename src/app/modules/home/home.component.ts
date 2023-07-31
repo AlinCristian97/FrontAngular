@@ -7,10 +7,12 @@ import { ImageSlideInterface } from 'src/app/shared/models/interfaces/image-slid
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  
-  slides: ImageSlideInterface[] = [
+  mainSliderSlides: ImageSlideInterface[] = [
     { url: '../../../assets/images/slides/1.jpg', title: 'plant1'},
     { url: '../../../assets/images/slides/2.jpg', title: 'plant2'},
     { url: '../../../assets/images/slides/3.jpg', title: 'plant3'},
   ];
+
+  mainSliderIntervalSlidingInitialDelayInSeconds: number = 5;
+  mainSliderIntervalSlidingPeriodInSeconds: number = 3;
 }

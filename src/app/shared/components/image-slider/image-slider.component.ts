@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ImageSlideInterface } from '../../models/interfaces/image-slide.interface';
 import { interval, Subscription } from 'rxjs';
+import { IntervalExecutorService } from '../../services/interval-executor.service';
 
 @Component({
   selector: 'app-shared-image-slider',
@@ -9,34 +10,39 @@ import { interval, Subscription } from 'rxjs';
 })
 export class ImageSliderComponent implements OnInit {
   @Input() slides: ImageSlideInterface[] = [];
+  @Input() intervalSlidingInitialDelayInSeconds: number = 10;
+  @Input() intervalSlidingPeriodInSeconds: number = 10;
+  intervalSlidingCallback: () => void = this.goToNext;
 
   dotsMode: boolean = false;
-
   currentIndex: number = 0;
 
-  autoplayIntervalInMiliseconds: number = 5000;
-  private autoplayTimerSubscription: Subscription = new Subscription();
+  constructor(private intervalExecutorService: IntervalExecutorService) { }
 
   ngOnInit(): void {
-    this.startTimer();
+    this.startIntervalSliding(this.intervalSlidingInitialDelayInSeconds, this.intervalSlidingPeriodInSeconds);
   }
 
   ngOnDestroy(): void {
-    this.stopTimer();
+    this.stopIntervalSliding();
   }
 
-  private startTimer(): void {
-    this.autoplayTimerSubscription = interval(this.autoplayIntervalInMiliseconds)
-      .subscribe(() => {
-        this.goToNext();
-      });
+  private startIntervalSliding(intervalSlidingInitialDelayInSeconds: number, intervalSlidingPeriodInSeconds: number): void {
+    const intervalSlidingInitialDelayInMiliseconds: number = intervalSlidingInitialDelayInSeconds * 1000;
+    const intervalSlidingPeriodInMiliseconds: number = intervalSlidingPeriodInSeconds * 1000;
+
+    this.intervalExecutorService.start(intervalSlidingInitialDelayInMiliseconds, intervalSlidingPeriodInMiliseconds, () => this.intervalSlidingCallback());
   }
 
-  private stopTimer(): void {
-    if (this.autoplayTimerSubscription && !this.autoplayTimerSubscription.closed) {
-      this.autoplayTimerSubscription.unsubscribe();
-      console.log('Logging stopped.');
-    }
+  private stopIntervalSliding(): void {
+    this.intervalExecutorService.stop();
+  }
+
+  private resetIntervalSlidingPeriod(): void {
+    const intervalSlidingPeriodInMiliseconds: number = this.intervalSlidingPeriodInSeconds * 1000;
+
+    this.intervalExecutorService.stop();
+    this.intervalExecutorService.start(0, intervalSlidingPeriodInMiliseconds, () => this.intervalSlidingCallback());
   }
 
   public getCurrentSlideUrl(): string {
@@ -48,6 +54,8 @@ export class ImageSliderComponent implements OnInit {
     const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
 
     this.currentIndex = newIndex;
+
+    this.resetIntervalSlidingPeriod();
   }
 
   public goToPrevious(): void {
@@ -55,9 +63,13 @@ export class ImageSliderComponent implements OnInit {
     const newIndex = isFirstSlide ? this.slides.length - 1 : this.currentIndex - 1;
 
     this.currentIndex = newIndex;
+
+    this.resetIntervalSlidingPeriod();
   }
 
   public goToSlide(slideIndex: number): void {
     this.currentIndex = slideIndex;
+
+    this.resetIntervalSlidingPeriod();
   }
 }
