@@ -1,13 +1,13 @@
 <!-- TODO: add class dynamically from ts -->
 
-<mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle>
+<!-- <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle> -->
 
 
 <div [ngClass]="{'dark-theme': isDarkTheme | async, 'light-theme': !(isDarkTheme | async)}">
   <div class="mat-typography mat-app-background">
   <!-- Nav -->
   <div>
-  <app-navbar></app-navbar>
+  <!-- <app-navbar></app-navbar> -->
   </div>
 
   <!-- Router -->
@@ -17,6 +17,6 @@
 
   <!-- Footer -->
   <div>
-  <app-footer></app-footer>
+  <!-- <app-footer></app-footer> -->
   </div>
 </div>

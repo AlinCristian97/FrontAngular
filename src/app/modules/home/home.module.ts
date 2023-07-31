@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 // Angular Material Modules
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { MatButtonModule } from '@angular/material/button';
 
     // Angular Material Modules
     MatSlideToggleModule,
-    MatButtonModule
+    MatButtonModule,
+
+    SharedModule
   ]
 })
 export class HomeModule { }

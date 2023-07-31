@@ -18,6 +18,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
     // My Modules
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
