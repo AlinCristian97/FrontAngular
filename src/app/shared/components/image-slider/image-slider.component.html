@@ -9,7 +9,7 @@
     >
         <div *ngIf="!dotsMode" class="buttonsContainer">
             <div>
-                <button *ngFor="let slide of slides; let slideIndex = index" (click)="goToSlide(slideIndex)" matButton style="margin: 0 1%; padding: 0.5% 2%">Slide {{slide.title}}</button>
+                <button *ngFor="let slide of slides; let slideIndex = index" (click)="goToSlide(slideIndex)" mat-raised-button color="accent" style="margin: 0 1%; padding: 0.5% 2%">Slide {{slide.title}}</button>
             </div>
         </div>
     </div>
