@@ -1,23 +1,18 @@
 <div class="slider">
-  <div>
-    <div (click)="goToPrevious()" class="leftArrow">❰</div>
-    <div (click)="goToNext()" class="rightArrow">❱</div>
-  </div>
+  <!-- Image -->
   <div
     class="slide"
     [ngStyle]="{'background-image': getCurrentSlideUrl() }"
   >
     <div class="slide-overlay"></div>
-    <div *ngIf="!dotsMode" class="buttonsContainer">
-      <div
-      *ngFor="let slide of slides; let slideIndex = index"
-      class="dot"
-      (click)="goToSlide(slideIndex)"
-      >
-        <button mat-raised-button color="accent"> {{slide.title}} </button>
-      </div>
-    </div>
   </div>
+
+  <!-- Navigation -->
+  <div>
+    <div (click)="goToPrevious()" class="leftArrow">❰</div>
+    <div (click)="goToNext()" class="rightArrow">❱</div>
+  </div>
+
   <div *ngIf="dotsMode" class="dotsContainer">
     <div
     *ngFor="let slide of slides; let slideIndex = index"
@@ -27,5 +22,14 @@
     ●
     </div>
   </div>
-
+  
+  <div *ngIf="!dotsMode" class="buttonsContainer">
+    <div
+    *ngFor="let slide of slides; let slideIndex = index"
+    class="dot"
+    (click)="goToSlide(slideIndex)"
+    >
+      <button mat-raised-button color="accent"> {{slide.title}} </button>
+    </div>
+  </div>
 </div>
