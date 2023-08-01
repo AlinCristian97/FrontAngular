@@ -66,3 +66,20 @@
     align-items: center;
     gap: 10px;
 }
+
+.actionContainer {
+    position: absolute;
+    bottom: 400px;
+    left: 200px;
+}
+
+.actionMessage {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px 40px;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -1,5 +1,5 @@
 <div class="slider">
-  <!-- Image -->
+  <!-- Background -->
   <div
     class="slide"
     [ngStyle]="{'background-image': getCurrentSlideUrl() }"
@@ -7,7 +7,7 @@
     <div class="slide-overlay"></div>
   </div>
 
-  <!-- Navigation -->
+  <!-- Foreground -->
   <div>
     <div (click)="goToPrevious()" class="leftArrow">❰</div>
     <div (click)="goToNext()" class="rightArrow">❱</div>
@@ -22,7 +22,7 @@
     ●
     </div>
   </div>
-  
+
   <div *ngIf="!dotsMode" class="buttonsContainer">
     <div
     *ngFor="let slide of slides; let slideIndex = index"
@@ -30,6 +30,17 @@
     (click)="goToSlide(slideIndex)"
     >
       <button mat-raised-button color="accent"> {{slide.title}} </button>
+    </div>
+  </div>
+
+  <div class="actionContainer">
+    <div>
+      <p class="actionMessage">
+        {{slides[currentIndex].actionMessage !== undefined ? slides[currentIndex].actionMessage : 'todo - replace with empty string'}}
+      </p>
+    </div>
+    <div>
+      <button class="actionButton">GO</button>
     </div>
   </div>
 </div>
