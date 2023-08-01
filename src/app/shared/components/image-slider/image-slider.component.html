@@ -34,13 +34,15 @@
   </div>
 
   <div class="actionContainer">
-    <div>
+    <div class="actionMessageContainer">
       <p class="actionMessage">
         {{slides[currentIndex].actionMessage !== undefined ? slides[currentIndex].actionMessage : 'todo - replace with empty string'}}
       </p>
     </div>
-    <div>
-      <button class="actionButton">GO</button>
+    <div class="actionButtonContainer">
+      <a mat-raised-button color="accent" class="actionButton" href="#">{{slides[currentIndex].actionButtonText !== undefined ? slides[currentIndex].actionButtonText : 'todo - handle case no link'}}</a>
+      <!-- add actionButtonLink dynamically to href -->
+      <!-- <a mat-raised-button color="accent" class="actionButton" href="tel:1234567890">GO LOREM IPSUM GO!</a> -->
     </div>
   </div>
 </div>

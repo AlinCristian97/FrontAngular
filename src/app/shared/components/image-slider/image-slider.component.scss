@@ -73,13 +73,28 @@
     left: 200px;
 }
 
-.actionMessage {
+.actionMessageContainer {
     background-color: white;
+    padding: 20px 40px;
+}
+
+.actionButtonContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actionMessage {
     color: black;
     text-align: center;
-    padding: 20px 40px;
-    width: 100%;
     font-size: large;
-    font-weight: bold;
     text-transform: uppercase;
 }
+
+.actionButton {
+
+}
+
+
+
+
