@@ -8,9 +8,9 @@ import { Tile } from '../../models/interfaces/tile.interface';
 })
 export class ProjectsGridComponent {
   tiles: Tile[] = [
-    {text: 'One', color: 'lightblue'},
-    {text: 'Two', color: 'lightgreen'},
-    {text: 'Three', color: 'lightpink'},
-    {text: 'Four', color: '#DDBDF1'},
+    {title: 'One', imagePath: 'lightblue'},
+    {title: 'Two', imagePath: 'lightgreen'},
+    {title: 'Three', imagePath: 'lightpink'},
+    {title: 'Four', imagePath: '#DDBDF1'},
   ];
 }

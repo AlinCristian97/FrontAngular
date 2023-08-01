@@ -1,4 +1,4 @@
 export interface Tile {
-    color: string;
-    text: string;
+    imagePath: string;
+    title: string;
 }
