@@ -1,10 +1,17 @@
-<div style="background-color: lightgoldenrodyellow;">
+<div style="background-color: lightgoldenrodyellow;" class="grid-container">
     <mat-grid-list cols="2" rowHeight="2:1">
         <mat-grid-tile
             *ngFor="let tile of tiles"
             [ngStyle]="{'background-image': 'url(' + tile.imagePath + ')'}"
             style="color: white">
-          {{tile.title}}
+            <div class="tile">
+                <div class="tile-overlay"></div>
+            </div>
+            <div>
+                <p class="tile-text">
+                    {{tile.title}}
+                </p>
+            </div>
         </mat-grid-tile>
     </mat-grid-list>              
 </div>
