@@ -8,9 +8,11 @@ import { Tile } from '../../models/interfaces/tile.interface';
 })
 export class ProjectsGridComponent {
   tiles: Tile[] = [
-    {title: 'One', imagePath: 'lightblue'},
-    {title: 'Two', imagePath: 'lightgreen'},
-    {title: 'Three', imagePath: 'lightpink'},
-    {title: 'Four', imagePath: '#DDBDF1'},
+    {title: 'One Lorem', imagePath: '../../../assets/images/grids/home-projects/1.jpg'},
+    {title: 'Two Lorems', imagePath: '../../../assets/images/grids/home-projects/2.jpg'},
+    {title: 'Three Lorems', imagePath: '../../../assets/images/grids/home-projects/3.jpg'},
+    {title: 'Four Lorems', imagePath: '../../../assets/images/grids/home-projects/4.jpg'},
+    {title: 'Five Lorems', imagePath: '../../../assets/images/grids/home-projects/5.jpg'},
+    {title: 'Six Lorems', imagePath: '../../../assets/images/grids/home-projects/6.jpg'},
   ];
 }
