@@ -21,4 +21,9 @@ export class IntervalExecutorService {
       this.subscription = undefined;
     }
   }
+
+  resetPeriod(periodInMiliseconds: number, callback: () => void) {
+    this.stop();
+    this.start(periodInMiliseconds, periodInMiliseconds, callback);
+  }
 }

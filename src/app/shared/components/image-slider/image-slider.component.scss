@@ -1,8 +1,17 @@
 .slide {
-    width: 100%;
     height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
+}
+
+.slide-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-image: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
 }
   
 .rightArrow {
@@ -34,18 +43,26 @@
 
 .buttonsContainer {
     position: relative;
-    top: 80%;
-    left: 10%
 }
-  
+
 .dotsContainer {
     display: flex;
     justify-content: center;
 }
-  
+
 .dot {
-    color: white;
     margin: 0 3px;
     cursor: pointer;
     font-size: 20px;
+}
+
+.buttonsContainer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
