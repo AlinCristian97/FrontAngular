@@ -6,13 +6,4 @@ import { ImageSlideInterface } from 'src/app/shared/models/interfaces/image-slid
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  mainSliderSlides: ImageSlideInterface[] = [
-    { url: '../../../assets/images/slides/1.jpg', title: 'plant1', actionMessage: undefined, actionButtonText: undefined, actionButtonLink: undefined},
-    { url: '../../../assets/images/slides/2.jpg', title: 'plant2', actionMessage: 'Lorem ipsum!', actionButtonText: 'Lorem ipsum go!', actionButtonLink: '#'},
-    { url: '../../../assets/images/slides/3.jpg', title: 'plant3', actionMessage: 'Ipsum Lore Ipusm Lorem!', actionButtonText: 'go now!', actionButtonLink: '#'},
-  ];
-
-  mainSliderIntervalSlidingInitialDelayInSeconds: number = 5;
-  mainSliderIntervalSlidingPeriodInSeconds: number = 3;
-}
+export class HomeComponent { }

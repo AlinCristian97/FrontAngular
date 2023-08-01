@@ -6,12 +6,20 @@ import { CommonModule } from '@angular/common';
 // Angular Material Modules
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 import { SharedModule } from 'src/app/shared/shared.module';
+import { MainSliderComponent } from './components/main-slider/main-slider.component';
+import { ProjectsGridComponent } from './components/projects-grid/projects-grid.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    
+    MainSliderComponent,
+    ProjectsGridComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +27,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     // Angular Material Modules
     MatSlideToggleModule,
     MatButtonModule,
+    MatGridListModule,
 
     SharedModule
   ]
