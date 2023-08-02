@@ -20,6 +20,7 @@ export class StatsNumbersComponent implements OnInit {
     this.startCounting();
   }
 
+  // TODO: Make this slow-down to work without any leaks and other problems, think of how many levels of slow-down there should be, make this parameterizable from @Input
   private startCounting(): void {
     this.numbers.forEach(n => {
       let subs = new Subscription();
