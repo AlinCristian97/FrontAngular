@@ -4,6 +4,7 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { StatsNumbersComponent } from './components/stats-numbers/stats-numbers.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -17,7 +18,8 @@ import { StatsNumbersComponent } from './components/stats-numbers/stats-numbers.
 
     // Angular Material Modules
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   exports: [
     ImageSliderComponent,
