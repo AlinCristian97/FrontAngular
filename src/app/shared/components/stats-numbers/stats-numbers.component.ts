@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IntervalExecutorService } from '../../services/interval-executor.service';
-import { interval, timer } from 'rxjs';
+import { Subscription, interval, subscribeOn, timer } from 'rxjs';
 
 @Component({
   selector: 'app-shared-stats-numbers',
@@ -21,15 +21,32 @@ export class StatsNumbersComponent implements OnInit {
   }
 
   private startCounting(): void {
-    this.intervalExecutorService.start(0, 1, () => this.incrementCurrentValue());
+    this.numbers.forEach(n => {
+      let subs = new Subscription();
+
+      subs = interval(1).subscribe(() => {
+        this.incrementCurrentValue(n);
+
+        if (n.maxValue - n.currentValue < 20) {
+          subs.unsubscribe();
+          interval(100).subscribe(() => {
+            this.incrementCurrentValue(n);
+          });
+        }
+      });
+    });
   }
 
-  private incrementCurrentValue() {
-    this.numbers.forEach(n => {
-      if (n.currentValue < n.maxValue) {
-        n.currentValue++;
-      }
-    });
+  // private incrementCurrentValue() {
+  //   this.numbers.forEach(n => {
+
+  //   });
+  // }
+
+  private incrementCurrentValue(number: NumberForStats) {
+    if (number.currentValue < number.maxValue) {
+      number.currentValue++;
+    }
   }
 }
 
