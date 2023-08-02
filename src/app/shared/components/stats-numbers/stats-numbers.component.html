@@ -1,1 +1,15 @@
-<p>stats-numbers works!</p>
+<div class="numbersContainer">
+    <div *ngFor="let number of numbers">
+        <div>
+            <p style="text-align: center;">
+                {{number.title}}
+            </p>
+        </div>
+        <br>
+        <div>
+            <p style="text-align: center;">
+                {{number.value}}
+            </p>
+        </div>
+    </div>
+</div>
