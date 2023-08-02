@@ -27,10 +27,17 @@ export class StatsNumbersComponent implements OnInit {
       subs = interval(1).subscribe(() => {
         this.incrementCurrentValue(n);
 
-        if (n.maxValue - n.currentValue < 20) {
+        if (n.maxValue - n.currentValue < 50) {
           subs.unsubscribe();
-          interval(100).subscribe(() => {
+          subs = interval(100).subscribe(() => {
             this.incrementCurrentValue(n);
+
+            if (n.maxValue - n.currentValue < 10) {
+              subs.unsubscribe();
+              subs = interval(300).subscribe(() => {
+                this.incrementCurrentValue(n);
+              });
+            }
           });
         }
       });
