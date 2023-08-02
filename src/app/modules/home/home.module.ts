@@ -12,6 +12,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MainSliderComponent } from './components/main-slider/main-slider.component';
 import { ProjectsGridComponent } from './components/projects-grid/projects-grid.component';
+import { MainStatsNumbersComponent } from './components/main-stats-numbers/main-stats-numbers.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProjectsGridComponent } from './components/projects-grid/projects-grid.
     HomeComponent,
     
     MainSliderComponent,
-    ProjectsGridComponent
+    ProjectsGridComponent,
+    MainStatsNumbersComponent
   ],
   imports: [
     CommonModule,
