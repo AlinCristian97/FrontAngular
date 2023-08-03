@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { StatsNumbersComponent } from './components/stats-numbers/stats-numbers.component';
 import {MatCardModule} from '@angular/material/card';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
 
 
 
@@ -12,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     ImageSliderComponent,
     StatsNumbersComponent,
+    TestimonialComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import {MatCardModule} from '@angular/material/card';
   ],
   exports: [
     ImageSliderComponent,
-    StatsNumbersComponent
+    StatsNumbersComponent,
+    TestimonialComponent
   ]
 })
 export class SharedModule { }

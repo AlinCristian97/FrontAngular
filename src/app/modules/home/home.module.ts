@@ -13,6 +13,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MainSliderComponent } from './components/main-slider/main-slider.component';
 import { ProjectsGridComponent } from './components/projects-grid/projects-grid.component';
 import { MainStatsNumbersComponent } from './components/main-stats-numbers/main-stats-numbers.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MainStatsNumbersComponent } from './components/main-stats-numbers/main-
     
     MainSliderComponent,
     ProjectsGridComponent,
-    MainStatsNumbersComponent
+    MainStatsNumbersComponent,
+    TestimonialsComponent
   ],
   imports: [
     CommonModule,
