@@ -1,5 +1,5 @@
 <div style="background-color: lightgoldenrodyellow;">
-    <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-list [cols]="cols" rowHeight="2:1">
         <mat-grid-tile
         *ngFor="let tile of tiles"
         [ngStyle]="{'background-image': 'url(' + tile.imagePath + ')'}"

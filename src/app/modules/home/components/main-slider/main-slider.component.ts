@@ -13,6 +13,6 @@ export class MainSliderComponent {
     { url: '../../../assets/images/slides/3.jpg', title: 'plant3', actionMessage: 'Ipsum Lore Ipusm Lorem!', actionButtonText: 'go now!', actionButtonLink: '#'},
   ];
 
-  intervalSlidingInitialDelayInSeconds: number = 5;
-  intervalSlidingPeriodInSeconds: number = 3;
+  intervalSlidingInitialDelayInSeconds: number = 15;
+  intervalSlidingPeriodInSeconds: number = 20;
 }

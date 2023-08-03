@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
 // Angular Material Modules
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MainSliderComponent } from './components/main-slider/main-slider.component';
@@ -32,6 +32,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
     MatSlideToggleModule,
     MatButtonModule,
     MatGridListModule,
+    MatDividerModule,
 
     SharedModule
   ]
