@@ -14,27 +14,15 @@ export class BreakpointService {
   isXLarge$: Observable<boolean>;
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.isXSmall$ = this.breakpointObserver.observe(Breakpoints.XSmall).pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+    this.isXSmall$ = this.observeBreakpoint(Breakpoints.XSmall);
+    this.isSmall$ = this.observeBreakpoint(Breakpoints.Small);
+    this.isMedium$ = this.observeBreakpoint(Breakpoints.Medium);
+    this.isLarge$ = this.observeBreakpoint(Breakpoints.Large);
+    this.isXLarge$ = this.observeBreakpoint(Breakpoints.XLarge);
+  }
 
-    this.isSmall$ = this.breakpointObserver.observe(Breakpoints.Small).pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-    this.isMedium$ = this.breakpointObserver.observe(Breakpoints.Medium).pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-    this.isLarge$ = this.breakpointObserver.observe(Breakpoints.Large).pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-    this.isXLarge$ = this.breakpointObserver.observe(Breakpoints.XLarge).pipe(
+  private observeBreakpoint(breakpoint: string): Observable<boolean> {
+    return this.breakpointObserver.observe(breakpoint).pipe(
       map(result => result.matches),
       shareReplay()
     );

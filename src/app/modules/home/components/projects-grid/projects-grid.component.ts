@@ -24,47 +24,48 @@ export class ProjectsGridComponent {
     {title: 'Six Lorems', imagePath: '../../../assets/images/grids/home-projects/6.jpg'},
   ];
 
-  cols: number = 0;
 
   private breakpointSubscriptions: Subscription[] = [];
+  cols: number = 0;
 
-  //TODO: Check if you can isolate it or include it in an easier way
   constructor(private breakpointService: BreakpointService) {
+    this.registerBreakpointSizes();
+  }
+
+  private registerBreakpointSizes() {
     this.breakpointSubscriptions.push(
-      this.breakpointService.isXSmall$.subscribe(value => 
-        {
-          if (value === true) {
-            this.cols = 1;
-          }
-        }),
-      this.breakpointService.isSmall$.subscribe(value => 
-        {
-          if (value === true) {
-            this.cols = 2;
-          }
-        }),
-      this.breakpointService.isMedium$.subscribe(value => 
-        {
-          if (value === true) {
-            this.cols = 3;
-          }
-        }),
-      this.breakpointService.isLarge$.subscribe(value => 
-        {
-          if (value === true) {
-            this.cols = 4;
-          }
-        }),
-      this.breakpointService.isXLarge$.subscribe(value => 
-        {
-          if (value === true) {
-            this.cols = 5;
-          }
-        })
+      this.breakpointService.isXSmall$.subscribe(value => { if (value) this.handleBreakpointXSmall(); }),
+      this.breakpointService.isSmall$.subscribe(value => { if (value) this.handleBreakpointSmall(); }),
+      this.breakpointService.isMedium$.subscribe(value => { if (value) this.handleBreakpointMedium(); }),
+      this.breakpointService.isLarge$.subscribe(value => { if (value) this.handleBreakpointLarge(); }),
+      this.breakpointService.isXLarge$.subscribe(value => { if (value) this.handleBreakpointXLarge(); }),
     );
   }
 
+  private handleBreakpointXSmall() {
+    console.log("handleBreakpointXSmall");
+    this.cols = 1;
+  }
 
+  private handleBreakpointSmall() {
+    console.log("handleBreakpointSmall");
+    this.cols = 2;
+  }
+
+  private handleBreakpointMedium() {
+    console.log("handleBreakpointMedium");
+    this.cols = 3;
+  }
+
+  private handleBreakpointLarge() {
+    console.log("handleBreakpointLarge");
+    this.cols = 4;
+  }
+
+  private handleBreakpointXLarge() {
+    console.log("handleBreakpointXLarge");
+    this.cols = 5;
+  }
   
   ngOnDestroy(): void {
     this.breakpointSubscriptions.forEach(subscription => subscription.unsubscribe());
