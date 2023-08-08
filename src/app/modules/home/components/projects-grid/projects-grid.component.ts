@@ -21,7 +21,6 @@ export class ProjectsGridComponent {
     {title: 'Three Lorems', imagePath: '../../../assets/images/grids/home-projects/3.jpg'},
     {title: 'Four Lorems', imagePath: '../../../assets/images/grids/home-projects/4.jpg'},
     {title: 'Five Lorems', imagePath: '../../../assets/images/grids/home-projects/5.jpg'},
-    {title: 'Six Lorems', imagePath: '../../../assets/images/grids/home-projects/6.jpg'},
   ];
 
 
